@@ -2,7 +2,8 @@
     "compilerOptions": {
         "outDir": "dist/js", //informa onde os arquivos JS serão gerados
         "target": "ES6", //versão do EcmaScript que será dado o suporte
-        "noEmitOnError": true //evita que a pasta dist/js seja gerada caso tenha algum erro nos arquivos TS
+        "noEmitOnError": true, //evita que a pasta dist/js seja gerada caso tenha algum erro nos arquivos TS
+        "noImplicitAny": true //desativa a tipagem Any por padrão
     },
     "include": ["app/**/*"] //indica onde está os arquivos TS que devem ser compilados
 }

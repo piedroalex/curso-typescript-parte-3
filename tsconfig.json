@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "outDir": "dist/js", //informa onde os arquivos JS serão gerados.
+        "outDir": "app/dist/js", //informa onde os arquivos JS serão gerados.
         "target": "ES6", //versão do EcmaScript que será dado o suporte.
         "noEmitOnError": true, //evita que a pasta dist/js seja gerada caso tenha algum erro nos arquivos TS.
         "noImplicitAny": true, //desativa a tipagem Any por padrão.
         "removeComments": true, //remove os comentários dos arquivos TS nos arquivos JS gerados.
         "strictNullChecks": true //diz para o compilador TSC que pare de assumir implicitamente o tipo 'null' para todos os tipos da aplicação, obrigando o desenvolvedor a tratar todos os pontos de acesso a valores 'null' em sua aplicação.
     },
-    "include": ["app/**/*"] //indica onde está os arquivos TS que devem ser compilados.
+    "include": ["app/src/**/*"] //indica onde está os arquivos TS que devem ser compilados.
 }

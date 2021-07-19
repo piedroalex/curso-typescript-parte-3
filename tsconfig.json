@@ -5,7 +5,8 @@
         "noEmitOnError": true, //evita que a pasta dist/js seja gerada caso tenha algum erro nos arquivos TS.
         "noImplicitAny": true, //desativa a tipagem Any por padrão.
         "removeComments": true, //remove os comentários dos arquivos TS nos arquivos JS gerados.
-        "strictNullChecks": true //diz para o compilador TSC que pare de assumir implicitamente o tipo 'null' para todos os tipos da aplicação, obrigando o desenvolvedor a tratar todos os pontos de acesso a valores 'null' em sua aplicação.
+        "strictNullChecks": true, //diz para o compilador TSC que pare de assumir implicitamente o tipo 'null' para todos os tipos da aplicação, obrigando o desenvolvedor a tratar todos os pontos de acesso a valores 'null' em sua aplicação.
+        "experimentalDecorators": true //autoriza que o compilador utilize decorators experimentais
     },
     "include": ["app/src/**/*"] //indica onde está os arquivos TS que devem ser compilados.
 }

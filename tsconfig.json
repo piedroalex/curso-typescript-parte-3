@@ -6,7 +6,8 @@
         "noImplicitAny": true, //desativa a tipagem Any por padrão.
         "removeComments": true, //remove os comentários dos arquivos TS nos arquivos JS gerados.
         "strictNullChecks": true, //diz para o compilador TSC que pare de assumir implicitamente o tipo 'null' para todos os tipos da aplicação, obrigando o desenvolvedor a tratar todos os pontos de acesso a valores 'null' em sua aplicação.
-        "experimentalDecorators": true //autoriza que o compilador utilize decorators experimentais
+        "experimentalDecorators": true, //autoriza que o compilador utilize decorators experimentais   
+        "sourceMap": true //permite, em desenvolvimento, que adicionemos breakpoint nos arquivos TS e debugar no navegador
     },
     "include": ["app/src/**/*"] //indica onde está os arquivos TS que devem ser compilados.
 }

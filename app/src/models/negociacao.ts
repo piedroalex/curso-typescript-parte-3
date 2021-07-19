@@ -1,10 +1,20 @@
-export class Negociacao {
+import { Modelo } from "../interfaces/modelo.js";
+
+export class Negociacao implements Modelo<Negociacao> {
 
     constructor(
         private _data: Date, 
         public readonly quantidade: number, 
         public readonly valor: number
     ){}
+
+    public static criaDe(dataParam: string, quantidadeParam: string, valorParam: string): Negociacao {
+        const exp = /-/g;
+        const data = new Date(dataParam.replace(exp, ','));
+        const quantidade = parseInt(quantidadeParam);
+        const valor = parseFloat(valorParam);
+        return new Negociacao(data, quantidade, valor);
+    }
 
     get volume(): number {
         return this.quantidade * this.valor;
@@ -15,11 +25,17 @@ export class Negociacao {
         return data;
     }
 
-    public static criaDe(dataParam: string, quantidadeParam: string, valorParam: string): Negociacao {
-        const exp = /-/g;
-        const data = new Date(dataParam.replace(exp, ','));
-        const quantidade = parseInt(quantidadeParam);
-        const valor = parseFloat(valorParam);
-        return new Negociacao(data, quantidade, valor);
+    public paraTexto(): string {
+        return `
+            Data: ${this.data},
+            Quantidade: ${this.quantidade},
+            Valor: ${this.valor}
+        `;
+    }
+
+    public ehIgual(negociacao: Negociacao): boolean {
+        return this.data.getDate() === negociacao.data.getDate()
+        && this.data.getMonth() === negociacao.data.getMonth()
+        && this.data.getFullYear() === negociacao.data.getFullYear();
     }
 }

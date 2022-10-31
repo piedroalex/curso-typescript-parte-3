@@ -1,6 +1,6 @@
 # Projeto: negociacoes
 
-Desenvolvido durante o curso [TypeScript parte 3: Avançando na linguagem](https://www.alura.com.br/curso-online-typescript-tecnicas-boas-praticas) da Alura.
+Desenvolvido durante o curso [TypeScript parte 3: Mais técnicas e boas práticas](https://www.alura.com.br/curso-online-typescript-tecnicas-boas-praticas) da Alura.
 
 ## Descrição
 
